@@ -17,4 +17,5 @@ $ gpg --edit-key 0B4FAC28129DEDA5272A486B1CEC874FFF9CB4E3 #Para poder darle el v
 $ gpg --sign-key 0B4FAC28129DEDA5272A486B1CEC874FFF9CB4E3 #Para firmar la llave de mi compañero
 $ gpg --encrypt --sign --recipient 0B4FAC28129DEDA5272A486B1CEC874FFF9CB4E3 doc_no_cifrado.txt #Enviar un archivo encyptado y firmado
 $ gpg --decrypt doc_cifrado_firmado_D.gpg #Verificar el archivo encryptado y firmado de mi compañero 
+gpg -o resultado_final.txt --decrypt doc_no_cifrado.txt.gpg #Muestro el contenido desincryptado del documento y lo envio a otro llamado resultado_final
 
