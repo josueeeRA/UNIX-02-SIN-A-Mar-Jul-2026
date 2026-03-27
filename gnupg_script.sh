@@ -11,3 +11,6 @@ gpg --import david_llave_compa.asc  #Importar public key de mi compa
  $ gpg --decrypt doc_cifrado_1.txt #Desencryptar el archivo que me mandó mi compa 
  gpg --clearsign doc_no_cifrado.txt #Firmar el documento no cifrado pero con texto legible
 $ gpg --sign doc_no_cifrado.txt #Firmar un documento no cofrado pero con texto en binario
+$ gpg --detach-sign doc_no_cifrado.txt #Crear un documento con la firma separada .sig
+$ gpg --verify doc_no_cifrado.txt_d.sig doc_no_cifrado_David.txt #Veridicar el archivo de mi compañero
+
