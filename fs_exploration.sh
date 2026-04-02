@@ -13,3 +13,6 @@ sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n"
 # The of the first command but for the 2 ways 
 sudo parted -l
 lsblk -f
+# Chek the command into {} and evaluate if exist the directory evalute whit echo "UEFI" if not evalute whit echo "BIOS" 
+# || us to evalute 2 conditionals but if one of the 2 conditionals is true the evaluation is true 
+[ -d/sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
