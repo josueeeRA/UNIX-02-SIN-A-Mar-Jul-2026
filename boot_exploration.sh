@@ -2,3 +2,7 @@
 ls -l -a -h
 # Is the same command but in a simple way
 ls -lah
+# Command for make a directory beggins whit "-"
+mkdir -- rm
+# Remove directory beggings whit "-"
+rmdir -- -rm
