@@ -8,4 +8,7 @@ mkdir -- rm
 rmdir -- -rm
 # Create a superficial clone whit the history of the commits 
 --depth 
+# To create a file whit "archivo.sh"
+touch archivo.ah
+
 
