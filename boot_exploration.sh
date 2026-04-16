@@ -6,3 +6,6 @@ ls -lah
 mkdir -- rm
 # Remove directory beggings whit "-"
 rmdir -- -rm
+# Create a superficial clone whit the history of the commits 
+--depth 
+
