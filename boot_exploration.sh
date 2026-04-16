@@ -18,3 +18,11 @@ chmod u+x script.sh
 chmod o-r secreto.txt
 # Add read and write permissions for user, and remove read, write and execute permissions for group and other in "privado"
 chmod u+rw,go-rwx privado
+# Sudo only execute for echo so we dont have permissions 
+sudo echo "hola">/etc/archivo_archivo_protegido
+# Sudo is for the commnad belows so we have the permsissions
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+# To show the content of the file
+cat archivo_protegido 
+# Create the file but shows the content in the terminal when execute the command 
+echo "hola" | sudo tee /etc/archivo_protegido
