@@ -1,0 +1,4 @@
+# This command is for list all repositories that we have in the repository and show all the specs about the  respository
+ls -l -a -h
+# Is the same command but in a simple way
+ls -lah
