@@ -10,5 +10,11 @@ rmdir -- -rm
 --depth 
 # To create a file whit "archivo.sh"
 touch archivo.ah
-
-
+# Change permissions the script.sh file whit execute permissions
+chmod +x script.sh
+# To add execute permissions for user 
+chmod u+x script.sh
+# Delete the read permission to others
+chmod o-r secreto.txt
+# Add read and write permissions for user, and remove read, write and execute permissions for group and other in "privado"
+chmod u+rw,go-rwx privado
