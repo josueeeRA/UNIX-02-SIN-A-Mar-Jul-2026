@@ -26,3 +26,5 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 cat archivo_protegido 
 # Create the file but shows the content in the terminal when execute the command 
 echo "hola" | sudo tee /etc/archivo_protegido
+# To rewrite the text that we have inside the file that we placed
+sudo sh --c 'echo' "chao" >> /etc/arcchivo_protegido'
