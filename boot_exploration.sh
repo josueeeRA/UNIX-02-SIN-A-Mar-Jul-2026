@@ -28,3 +28,9 @@ cat archivo_protegido
 echo "hola" | sudo tee /etc/archivo_protegido
 # To rewrite the text that we have inside the file that we placed
 sudo sh --c 'echo' "chao" >> /etc/arcchivo_protegido'
+# To change to root mode 
+sudo -i
+# To change to root mode but not optimal
+sudo su
+#  To change to root mode 
+sudo su -
