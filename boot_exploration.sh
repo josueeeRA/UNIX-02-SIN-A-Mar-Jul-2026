@@ -44,3 +44,9 @@ ls -l hola.sh
 chmod +x hola.sh
 # Execute the file 
 ./hola.sh
+# Change the permissions of prueba.txt
+touch prueba.txt
+chmod 600 prueba.txt
+ls-l prueba.txt
+chmod 755 prueba.txt
+ls -l prueba.txt
