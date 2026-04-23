@@ -32,5 +32,9 @@ sudo sh --c 'echo' "chao" >> /etc/arcchivo_protegido'
 sudo -i
 # To change to root mode but not optimal
 sudo su
-#  To change to root mode 
+# To change to root mode 
 sudo su -
+# Show in the terminal the HOME rute 
+echo "$HOME"
+# Print $HOME in the terminal 
+echo '$HOME'
