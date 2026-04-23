@@ -38,3 +38,9 @@ sudo su -
 echo "$HOME"
 # Print $HOME in the terminal 
 echo '$HOME'
+# To show the permissions of the file hola.sh
+ls -l hola.sh
+# Change the permissions of the file 
+chmod +x hola.sh
+# Execute the file 
+./hola.sh
