@@ -1,4 +1,4 @@
-   1  git fetch update
+    1  git fetch update
     2  git fetch upstream
     3  git checkout -b eval_p2_1_g2 upstream/eval_p2_1_g2 
     4  git push -u origin eval_p2_1_g2 
@@ -81,3 +81,26 @@
    81  git add runner.sh
    82  git commit -m "Fix problema 5: SUID activado en runner.sh"
    83  history
+   84  git .
+   85  git add .
+   86  git commit -m "Fix problema 5: SUID activado en runner.sh"
+   87  git add ruuner.sh
+   88  ls
+   89  git add .
+   90  git commit -m "Fix problema 5: SUID activado en runner.sh"
+   91  history
+   92  git .
+   93  git add
+   94  git add .
+   95  git commit -m "Fix problema 5: SUID activado en runner.sh"
+   96  cd ..
+   97  ls 
+   98  cd kepler/
+   99  ls
+  100  cd /temp
+  101  mkdir /tmp/kepler_zone
+  102  chmod +t /tmp/kepler_zone
+  103  git add .
+  104  git git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+  105  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+  106  history
