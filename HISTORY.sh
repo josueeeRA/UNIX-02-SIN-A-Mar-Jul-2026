@@ -104,3 +104,4 @@
   104  git git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
   105  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
   106  history
+  Profe hice hasta ael paso 6 pero no se me huzo comiit 
