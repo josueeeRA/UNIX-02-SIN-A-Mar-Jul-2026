@@ -106,3 +106,54 @@
   106  history
   Profe hice hasta ael paso 6 pero no se me huzo comiit 
   Lo anteriormente realizado fue hecho en clase desde aquí en adelante la prueba se continuó en casa. Es decir los puntos 
+  1ro se arregló el problema del commit haciendo: 
+  En vez de poner git add . se hizo git add ../../HISTORY.sh
+  Solamente se hizo commit de la parte 6 y anteriores partes debido a que el commit no funcionaba en clase, lo cual se puede evidenciar
+  en el history donde el commit ya se había hecho con anterioridad. 
+      1  ls 
+    2  cd e
+    3  cd evaluation/
+    4  ñs
+    5  ls
+    6  cd kepler/
+    7  ls
+    8  ls plantillas/
+    9  ls registros/
+   10  ls runner.sh
+   11  mkdir /tmp/kepler_zone
+   12  chmod +t /tmp/kepler_zone
+   13  git add .
+   14  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+   15  git add /tmp/kepler_zone
+   16  git add ../../HISTORY.sh
+   17  git git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+   18  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+   19  gpg --full-generate-key
+   20  cat > /tmp/mi_llave.batch <<'EOF'
+%no-protection
+Key-Type: RSA
+Key-Length: 2048
+Name-Real: vega
+Name-Email: vega@kepler.lab
+Expire-Date: 0
+%commit
+EOF
+
+   21  gpg --batch --generate-key /tmp/mi_llave.batch
+   22  gpg --list-keys vega@kepler.lab
+   23  ls
+   24  cd registros/
+   25  ls
+   26  gpg --encrypt --recipient vega@kepler.lab --output kepler/registros/sensores.log.gpg kepler/registros/sensores.log
+   27  gpg --encrypt --recipient vega@kepler.lab --always-trust --output kepler/registros/sensores.log.gpg kepler/registros/sensores.log
+   28  gpg --encrypt --recipient vega@kepler.lab sensores.log sensores.log.gpg
+   29  gpg --encrypt sensores.log sensores.log.gpg --recipient vega@kepler.lab
+   30  gpg --encrypt --recipient vega@kepler.lab --output sensores.log.gpg registros.log
+   31  ls
+   32  ls --keys
+   33  gpg --list-keys
+   34  gpg --encrypt --recipient vega@kepler.lab --output sensores.log.gpg sensores.log
+   35  ls
+   36  git add .
+   37  git commit -m "Fix problema 7: llave GPG generada y sensores.log cifrado"
+   38  history
