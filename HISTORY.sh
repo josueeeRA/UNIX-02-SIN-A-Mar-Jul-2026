@@ -110,7 +110,7 @@
   En vez de poner git add . se hizo git add ../../HISTORY.sh
   Solamente se hizo commit de la parte 6 y anteriores partes debido a que el commit no funcionaba en clase, lo cual se puede evidenciar
   en el history donde el commit ya se había hecho con anterioridad. 
-      1  ls 
+    1  ls 
     2  cd e
     3  cd evaluation/
     4  ñs
@@ -157,3 +157,21 @@ EOF
    36  git add .
    37  git commit -m "Fix problema 7: llave GPG generada y sensores.log cifrado"
    38  history
+   39  cd ..
+   40  gpg --clearsign --output kepler/ajustes.conf.asc ajustes.conf
+   41  gpg --clearsign --output ajustes.conf.asc ajustes.conf
+   42  gpg --verify kepler/runner.sh.sig kepler/runner.sh
+   43  gpg --verify runner.sh.sig kepler/runner.sh
+   44  gpg --verify runner.sh.sig runner.sh
+   45  ls
+   46  gpg --verify kepler/runner.sh.sig kepler/runner.sh
+   47  gpg --verify runner.sh.sig runner.sh
+   48  gpg --detach-sign --output runner.sh.sig runner.sh
+   49  ls
+   50  gpg --verify runner.sh.sig runner.sh
+   51  ls
+   52  git add ..
+   53  git add .
+   54  git commit -m "Fix problema 8: firmas GPG corregidas y creadas"
+   55  git push 
+   56  history
