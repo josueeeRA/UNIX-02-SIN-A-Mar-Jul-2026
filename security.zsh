@@ -25,3 +25,4 @@ ls -l comun # List in a long way
 usermod -a -G grupo_test luna # Add a group for the user 
 chgrp grupo_test comun # Chage the group to comun to grupo_tets 
 ls -l comun #List in a long way
+chown luna:grupo_test mi_archivo # Change the owner of mi_archivo to luna 
