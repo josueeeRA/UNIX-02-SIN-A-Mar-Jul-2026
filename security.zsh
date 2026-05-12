@@ -22,3 +22,6 @@ groups # For view the groups
 groupadd grupo_test # Add a group
 touch comun # Create a file 
 ls -l comun # List in a long way
+usermod -a -G grupo_test luna # Add a group for the user 
+chgrp grupo_test comun # Chage the group to comun to grupo_tets 
+ls -l comun #List in a long way
