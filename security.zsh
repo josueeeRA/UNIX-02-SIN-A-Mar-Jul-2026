@@ -26,3 +26,7 @@ usermod -a -G grupo_test luna # Add a group for the user
 chgrp grupo_test comun # Chage the group to comun to grupo_tets 
 ls -l comun #List in a long way
 chown luna:grupo_test mi_archivo # Change the owner of mi_archivo to luna 
+mkdir -p proyecto/sub #Create a proyecto directory 
+touch proyecto/readme proyecto/sub/datos  # Create the file into proyecto
+chown -R luna:grupo_test proyecto # Change owner 
+ls -lR proyecto 
