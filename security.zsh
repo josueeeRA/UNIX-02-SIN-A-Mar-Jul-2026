@@ -16,4 +16,9 @@ umaks 022 # To change the umask to the predetermined numbers
 whoami # Command for view who user im 
 echo "Hola" > mi_archivo # Command to create a file whit the message
 ls -l mi_archivo # List in a long form 
-useradd -m -s /usr/bin/zsh luna # Add a user 
+useradd -m -s /usr/bin/zsh luna # Add a user
+groups # For view the groups
+# We create a group but we not put the group 
+groupadd grupo_test # Add a group
+touch comun # Create a file 
+ls -l comun # List in a long way
