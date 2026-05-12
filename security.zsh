@@ -11,4 +11,5 @@ mkdir directorio3 # Create a new directory
 ls -l # List the directory in a long way 
 umask 077 # To rest the number 077 to the permissions of the new file
 touch secreto.txt # Create a new file 
-ls -l
+ls -l # List in a long form
+umaks 022 # To change the umask to the predetermined numbers 
