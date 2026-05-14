@@ -30,3 +30,5 @@ mkdir -p proyecto/sub #Create a proyecto directory
 touch proyecto/readme proyecto/sub/datos  # Create the file into proyecto
 chown -R luna:grupo_test proyecto # Change owner 
 ls -lR proyecto 
+id # To view the numeric user ID, primary group, and secundary groups
+cat /etc/passwd | head -10 # View all users of the system and view id the users have a password 
