@@ -36,3 +36,4 @@ groups # To view the group of the user
 id -u # User ID
 id -g # primary Group ID 
 id -G # All groups
+cat /etc/passwd | grep root # User grep to filter root in the file 
