@@ -32,3 +32,7 @@ chown -R luna:grupo_test proyecto # Change owner
 ls -lR proyecto 
 id # To view the numeric user ID, primary group, and secundary groups
 cat /etc/passwd | head -10 # View all users of the system and view id the users have a password 
+groups # To view the group of the user 
+id -u # User ID
+id -g # primary Group ID 
+id -G # All groups
