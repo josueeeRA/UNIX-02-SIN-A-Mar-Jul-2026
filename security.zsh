@@ -37,3 +37,16 @@ id -u # User ID
 id -g # primary Group ID 
 id -G # All groups
 cat /etc/passwd | grep root # User grep to filter root in the file 
+groupadd desarrolladores # Create a group
+groupadd -g 2000 operaciones #  Add a number group to operaciones
+groupadd --system sercvicios_web # Add the system group
+grep "GID_MIN\|GID?MAX\|SYS_GID" /etc/login.defs # View the system IDGs range
+addgroup diseno # Create a group 
+addgroup --gid 2100 meketing # Assig a number group
+addgroup --system cache_web # Create a group
+grep "diseno\|marketing\|cache_web" /etc/group #Filter with grep
+usermod -aG desarrolladores root #Add root yo desarrolladores
+usermod -aG diseno root #Add diseno to root 
+usermod -aG grupo_temporal root #  Add grupo_temporal to root 
+usermod -G desarrolladores root # Delete the groups of root
+id root
