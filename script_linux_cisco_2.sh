@@ -41,3 +41,25 @@ ls Work
 cp /etc/passwd .
 # Searches for and displays all lines containing the text string "sysadmin" inside the passwd file.
 grep sysadmin passwd
+# Matches any single character except a newline.
+. 
+# Matches any single character specified inside the brackets.
+[ ] 
+# Matches any single character that is not specified inside the brackets.
+[^] 
+# Matches zero or more occurrences of the preceding character.
+* 
+# Anchors the match pattern to the absolute beginning of a line. 
+^ 
+# Anchors the match pattern to the absolute end of a line.
+$ 
+# Matches one or more occurrences of the preceding pattern.
++ 
+# Makes the preceding pattern optional, matching zero or one occurrence.
+? 
+# Specifies the exact number, minimum, or range of matches required for the preceding pattern.
+{ } 
+# Acts as a logical OR (alternation) between two alternative patterns.
+| 
+# Groups multiple characters or patterns together to treat them as a single unit.
+( ) 
