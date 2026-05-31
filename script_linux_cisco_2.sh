@@ -27,3 +27,13 @@ ls School
 mv animals.txt zoo.txt
 # List the directory to view the change on the name of the archive 
 ls
+# Permanently deletes the specified file linux.txt from the file system.
+rm linux.txt
+# Checks for the existence of linux.txt, returning an error if the file has been deleted.
+ls linux.txt
+# Fails to delete the directory Work because the standard rm command only targets files.
+rm Work
+# Recursively and permanently deletes the Work directory along with all of its contents
+rm -r Work
+# Attempts to list the contents of the Work directory, confirming its deletion via a "No such file or directory" error.
+ls Work 
