@@ -139,3 +139,9 @@ sudo apt-get update
 sudo apt-get upgrade
 # Completely uninstalls the cowsay package along with all of its configuration files from the system.
 sudo apt-get purge cowsay
+# Changes the password of the currently logged-in user through an interactive terminal prompt.
+passwd
+# Displays the status of the "sysadmin" user account password, listing policy details like aging and locking status.
+passwd -S sysadmin
+# Allows a superuser or authorized account to change the password for the specific "sysadmin" user.
+passwd sysadmin
