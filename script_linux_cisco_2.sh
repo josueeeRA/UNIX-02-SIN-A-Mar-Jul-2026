@@ -119,3 +119,9 @@ ping -c 4 192.168.1.2
 ping -c 4 192.168.1.3
 # Terminates the current shell session
 exit
+# Displays a snapshot of the active processes currently running within the user's immediate terminal session.
+ps
+# Lists every single process running across the entire operating system, spanning all users and system services.
+ps -e
+# Lists all system-wide processes using a full-format listing that details the UID, PID, PPID, and execution commands.
+ps -ef
