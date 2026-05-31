@@ -125,3 +125,17 @@ ps
 ps -e
 # Lists all system-wide processes using a full-format listing that details the UID, PID, PPID, and execution commands.
 ps -ef
+# Updates the local package index to retrieve the latest version lists from the repositories.
+sudo apt-get update
+# Searches the package cache database for any software containing the keyword "cow" in its name or description.
+apt-cache search cow
+# Installs the "cowsay" utility package using administrative superuser privileges.
+sudo apt-get install cowsay
+# Runs the cowsay utility to generate an ASCII art cow speaking the specified text string.
+cowsay 'NDG Linux Unhatched'
+# Re-updates the local package lists to ensure repository data is perfectly synchronized.
+sudo apt-get update
+# Upgrades all currently installed software packages to their newest available versions.
+sudo apt-get upgrade
+# Completely uninstalls the cowsay package along with all of its configuration files from the system.
+sudo apt-get purge cowsay
