@@ -101,3 +101,13 @@ grep 'e*' red.txt
 grep 'ee*' red.txt
 # Reads directly from standard input (keyboard) and mirrors back lines containing "red" until interrupted with Ctrl+D.
 grep 'red'
+# Switches the current terminal session to the root user superaccount while completely loading the root user's environment profiles.
+su -
+# Immediately halts and powers down the system, safely terminating all active processes and unmounting file systems.
+shutdown now
+# Displays or sets the current system date, time, and timezone information on the terminal.
+date
+# Schedules a system shutdown to execute at the specific, explicit 24-hour military clock time of 01:51 AM.
+shutdown 01:51
+# Schedules a system shutdown to occur in exactly one minute while broadcasting a custom warning message to all logged-in users.
+shutdown +1 "Goodbye World!"
