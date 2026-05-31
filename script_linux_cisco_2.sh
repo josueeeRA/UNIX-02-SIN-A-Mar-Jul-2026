@@ -63,3 +63,41 @@ $
 | 
 # Groups multiple characters or patterns together to treat them as a single unit.
 ( ) 
+# Searches for and prints every line that contains the exact string "root" inside the passwd file.
+grep 'root' passwd
+# Filters and displays only the lines that strictly begin with the string "root" inside the /etc/passwd file.
+grep '^root' /etc/passwd
+# Displays the entire text content of the file alpha-first.txt directly to the terminal standard output.
+cat alpha-first.txt
+# Filters and displays only the lines that strictly end with the lowercase letter "r" inside the
+grep 'r$' alpha-first.txt
+# Displays the entire content of the file red.txt.
+cat red.txt
+# Matches any 4-character string starting with "r" and ending with "f".
+grep 'r..f' red.txt
+# Matches any 4-character string starting with "r" and ending with "d".
+grep 'r..d' red.txt
+# Matches any sequence of exactly four consecutive characters.
+grep '....' red.txt
+# Searches for 4-character strings starting with "r" and ending with "t" within /etc/passwd.
+grep 'r..t' /etc/passwd
+# Displays the complete text content of profile.txt.
+cat profile.txt
+# Matches and displays any line that contains at least one numeric digit.
+grep '[0-9]' profile.txt
+# Matches lines containing at least one non-numeric character.
+grep '[^0-9]' profile.txt
+# Searches for and matches a literal dot character instead of treating it as a wildcard.
+grep '[.]' profile.txt
+# Matches "r" followed by zero or more "e" characters, ending with "d".
+grep 're*d' red.txt
+# Matches "r" followed by any combination of zero or more "o" or "e" characters, ending with "d".
+grep 'r[oe]*d' red.txt
+# Matches zero or more occurrences of "z", which effectively returns every single line of the file.
+grep 'z*' red.txt
+# Matches zero or more occurrences of "e", resulting in displaying all lines of the file.
+grep 'e*' red.txt
+# Matches a literal "e" followed by zero or more "e" characters, filtering lines with at least one "e".
+grep 'ee*' red.txt
+# Reads directly from standard input (keyboard) and mirrors back lines containing "red" until interrupted with Ctrl+D.
+grep 'red'
