@@ -13,4 +13,17 @@ dd if=/dev/zero of=/tmp/swapex bs=1M count=50
 dd if=/dev/zero of=/tmp/swapex bs=1M count=50
 # Clones the entire primary hard drive (sda) directly onto a second hard drive (sdb), overwriting all target data.
 dd if=/dev/sda of=/dev/sdb
-#
+# Command to change the directory to Documents 
+cd ~/Documents/
+# Moves the file people.csv into the Work directory
+mv people.csv Work
+# List Work directory for view the changes 
+ls Work
+# Moves multiple specified files simultaneously into the School directory
+mv numbers.txt letters.txt alpha.txt School
+# List School directory for view the changes
+ls School
+# We use this commands also to change the names of the archives 
+mv animals.txt zoo.txt
+# List the directory to view the change on the name of the archive 
+ls
