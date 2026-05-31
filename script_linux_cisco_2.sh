@@ -111,3 +111,11 @@ date
 shutdown 01:51
 # Schedules a system shutdown to occur in exactly one minute while broadcasting a custom warning message to all logged-in users.
 shutdown +1 "Goodbye World!"
+# Displays network interface configurations, including active IP addresses, netmasks, and hardware MAC addresses.
+ifconfig
+# Sends exactly four ICMP echo request packets to the specified IP address to test network connectivity.
+ping -c 4 192.168.1.2
+# Sends exactly four ICMP echo request packets to a secondary IP host to verify network layer reachability.
+ping -c 4 192.168.1.3
+# Terminates the current shell session
+exit
