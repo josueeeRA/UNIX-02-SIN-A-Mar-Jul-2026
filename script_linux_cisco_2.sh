@@ -37,3 +37,7 @@ rm Work
 rm -r Work
 # Attempts to list the contents of the Work directory, confirming its deletion via a "No such file or directory" error.
 ls Work 
+# Copies the system's user account configuration file (/etc/passwd) into the current working directory.
+cp /etc/passwd .
+# Searches for and displays all lines containing the text string "sysadmin" inside the passwd file.
+grep sysadmin passwd
