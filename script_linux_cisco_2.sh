@@ -145,3 +145,21 @@ passwd
 passwd -S sysadmin
 # Allows a superuser or authorized account to change the password for the specific "sysadmin" user.
 passwd sysadmin
+# Displays the entire text content of the file "food.txt" directly to the terminal output.
+cat food.txt
+# Redirects the output of reading "food.txt" into "newfile1.txt", creating it or overwriting its previous contents.
+cat food.txt > newfile1.txt
+# Displays the entire text content of the newly created file "newfile1.txt" to verify the redirection.
+cat newfile1.txt
+# Prints the literal text string "Hello" directly onto the terminal standard output.
+echo "Hello"
+# Displays the content of "newfile1.txt" again to check its current status.
+cat newfile1.txt
+# Overwrites "newfile1.txt" with the single line "I like food.", erasing any previous content inside it.
+echo "I like food." > newfile1.txt
+# Displays the content of "newfile1.txt" to confirm the overwrite operation was successful.
+cat newfile1.txt
+# Appends the text string "This food is good." to the end of "newfile1.txt" without deleting the existing data.
+echo "This food is good." >> newfile1.txt
+# Displays the content of "newfile1.txt" to verify that the new line was successfully appended at the bottom.
+cat newfile1.txt
