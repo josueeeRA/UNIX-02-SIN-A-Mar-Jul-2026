@@ -163,3 +163,83 @@ cat newfile1.txt
 echo "This food is good." >> newfile1.txt
 # Displays the content of "newfile1.txt" to verify that the new line was successfully appended at the bottom.
 cat newfile1.txt
+# Opens or creates the file "newfile.txt" using the visual text editor (vi) in the terminal.
+vi newfile.txt
+# Moves the cursor one character to the left within the text editor.
+h
+# Moves the cursor down to the next line in the document.
+j
+# Moves the cursor up to the previous line in the document.
+k
+# Moves the cursor one character to the right within the text editor.
+l
+# Moves the cursor forward to the beginning of the next word.
+w
+# Moves the cursor backward to the beginning of the previous word.
+b
+# Moves the cursor to the absolute beginning of the current line.
+^
+# Moves the cursor to the absolute end of the current line.
+$
+# Deletes the specified character, word, or line selection (cuts text into the buffer).
+d
+# Copies the specified character, word, or line selection into the buffer without deleting it (yanks text).
+y
+# Pastes the contents of the buffer before or after the current cursor position (puts text).
+p | P
+# Deletes the entire current line where the cursor is positioned.
+dd
+# Deletes the current line and the following two lines, removing three lines in total.
+3dd
+# Deletes from the current cursor position to the end of the active word.
+dw
+# Deletes from the current cursor position across the next three words.
+d3w
+# Deletes four consecutive characters to the left of the current cursor position.
+d4h
+# Deletes the current line and immediately switches the editor into insert mode to change it.
+cc
+# Deletes the current word and immediately switches the editor into insert mode to change it.
+cw
+# Deletes the next three words and immediately switches the editor into insert mode to change them.
+c3w
+# Deletes five characters to the left and immediately switches the editor into insert mode to change them.
+c5h
+# Copies the entire current line into the temporary buffer without removing it.
+yy
+# Copies three consecutive lines starting from the current line into the temporary buffer.
+3yy
+# Copies the current word from the cursor position into the temporary buffer.
+yw
+# Copies everything from the current cursor position to the absolute end of the line into the buffer.
+y$
+# Pastes the contents of the temporary buffer immediately after the current cursor position or below the current line.
+p
+# Pastes the contents of the temporary buffer immediately before the current cursor position or above the current line.
+P
+# Switches to insert mode, positioning the cursor to append text exactly one character after its current location.
+a
+# Switches to insert mode, positioning the cursor to append text at the absolute end of the current line.
+A
+# Switches to insert mode, positioning the cursor to insert text exactly before its current location.
+i
+# Switches to insert mode, positioning the cursor to insert text at the absolute beginning of the current line.
+I
+# Opens a blank new line directly below the cursor and automatically switches into insert mode.
+o
+# Opens a blank new line directly above the cursor and automatically switches into insert mode.
+O
+# Writes the current document modifications and saves the changes directly to the file system.
+:w
+# Saves an exact copy of the currently open document under a specified new filename.
+:w nombre_del_archivo
+# Forces the editor to write and save changes to the file system, overriding standard write permissions if possible.
+:w!
+# Jumps the cursor directly to the first line of the document, or any other line number specified.
+:1
+# Closes the current file and opens the specified file for editing within the active session.
+:e nombre_del_archivo
+# Exits the editor safely, succeeding only if no unsaved modifications have been made to the open document.
+:q
+# Forces the editor to close immediately, discarding all unsaved modifications made during the session.
+:q!
