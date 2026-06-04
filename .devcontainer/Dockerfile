@@ -220,7 +220,7 @@ RUN git config --system --add safe.directory '*' \
 # Prompt del curso para bash
 
 #Cambiar la shel de logon a szh
-RUN chsh -s /usr/bin/zsh root
+RUN chsh -s /usr/bin/bash root
 
 #Promt institucional para estudiantes del curso
 RUN cat >> /root/.zshrc <<'EOF'
@@ -229,7 +229,7 @@ RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Josue-Ramirez]%f %F{yellow}%1~%f %(?.%F{green}GOOD.%F{red}BAD %?)%f %#'
 EOF
 
-CMD ["/usr/bin/zsh"]
+CMD ["/usr/bin/bash"]
 
 
 
