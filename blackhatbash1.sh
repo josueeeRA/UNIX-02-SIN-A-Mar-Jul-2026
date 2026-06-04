@@ -1,6 +1,8 @@
 # !/usr/bin/env bash 
 bash --version
+set -x 
 env
+set +x
 echo ${SHELL}
 echo ${RANDOM}
 echo ${UID}
@@ -14,4 +16,5 @@ bash -r blackhatbash1.sh
 set -x
 
 --snip--
+
 set +x
