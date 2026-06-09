@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Create the arguments to ask the first and last name 
-read -p "Ingresa tu primer nombre: " FIRST_NAME
-read -p "Ingresa tu apellido: " LAST_NAME
+# Create first and last names with 1 and 2 arguments 
+FIRST_NAME="${1}"
+LAST_NAME="${2}"
 
 # Create a file named output.txt with the command touch 
 touch output.txt
