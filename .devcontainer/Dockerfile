@@ -197,9 +197,3 @@ EOF
 # into the image, whereas CMD acts as a default launch command *after* the 
 # container starts running. Cloud environments can override CMD.
 CMD ["/usr/bin/bash"]
-
-
-
-
-
-
