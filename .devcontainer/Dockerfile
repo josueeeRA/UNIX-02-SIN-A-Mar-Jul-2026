@@ -1,28 +1,22 @@
 # ============================================================================
-#  Dockerfile — "receta" para construir la imagen del curso
-# ============================================================================
-#  Un Dockerfile es un archivo de texto con instrucciones paso a paso que
-#  Docker (o Codespaces) lee de arriba hacia abajo para fabricar una
-#  "imagen". Una imagen es como un molde congelado de un sistema Linux
-#  listo para usar; cada vez que abres el Codespace, se crea un
-#  "contenedor" a partir de ese molde.
-#
-#  Analogía: la imagen es el PLANO, el contenedor es la CASA construida
-#  con ese plano. Puedes construir muchas casas iguales a partir de un
-#  solo plano, y si destruyes una casa el plano sigue intacto.
-#
-#  Cada instrucción (FROM, ENV, RUN...) crea una "capa". Docker guarda
-#  esas capas en caché: si no cambias las primeras líneas, no las
-#  reconstruye y el siguiente build es casi instantáneo.
+# Course Development Environment Dockerfile
+# Reference: Black Hat Bash (BHB) - Chapters 1-3
+# Name: Josué Ramírez
 # ============================================================================
 
-
 # ----------------------------------------------------------------------------
-# FROM: imagen base sobre la que vamos a construir
+# Block A & B: Base Image and Layer/Cache Management
 # ----------------------------------------------------------------------------
-# En lugar de partir de cero, partimos de la imagen oficial de Kali Linux
-# en su versión "rolling" (actualización continua, siempre al día).
-# Todo lo que instalemos más abajo se apila ENCIMA de esta base.
+# A base image is a pre-configured, frozen blueprint of an operating system 
+# used as the starting point for building our custom container environment (BHB Ch.3). 
+# We use Kali Linux ('kali-rolling') because it comes pre-packed with security 
+# and networking tools, saving setup time. Everything we install later stacks 
+# on top of this foundation.
+#
+# Instruction order is critical in Docker because each command creates a 
+# read-only layer. Docker caches these layers. If an early line changes, 
+# its cache and all subsequent layers are invalidated, forcing a slow rebuild. 
+# Keeping stable instructions at the top optimizes build speed (BHB Ch.3).
 FROM kalilinux/kali-rolling:latest
 
 
