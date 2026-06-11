@@ -123,17 +123,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     proxychains4 \
     obfs4proxy \
     httpie \
-    
- # --- Después de instalar, activamos el idioma español ---
- # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
- # activar esa línea. Luego locale-gen compila los archivos de idioma.
+
+# ----------------------------------------------------------------------------
+# Block F: Localizing and Activating Spanish Locale
+# ----------------------------------------------------------------------------
+# We use 'sed -i' to perform an in-place stream edit on '/etc/locale.gen', 
+# uncommenting the Spanish locale line. Then, 'locale-gen' compiles the 
+# selected language definitions so the system can use Spanish formatting (BHB Ch.2).
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
- # --- Limpieza final: reducir el tamaño de la imagen ---
- # apt deja archivos de caché que ya no necesitamos después de instalar.
- # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
- # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
+# ----------------------------------------------------------------------------
+# Block G: Cache Cleanup
+# ----------------------------------------------------------------------------
+# 'apt-get clean' clears the downloaded package files (.deb), and 'rm -rf' 
+# deletes temporary repository metadata. This cleanup must happen within the 
+# EXACT SAME 'RUN' instruction. If done in a separate RUN, the files are deleted 
+# only in a newer layer, but they remain permanently embedded in the previous 
+# layer's history, wasting image space.
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
