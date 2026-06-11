@@ -175,20 +175,16 @@ RUN git config --system --add safe.directory '*' \
  && git lfs install --system
 
 # ----------------------------------------------------------------------------
-# CMD: comando que se ejecuta por defecto al arrancar el contenedor
+# Block K & L: Logon Shell Change and Custom Shell Prompt (Heredoc)
 # ----------------------------------------------------------------------------
-# Lanza una shell bash interactiva. Codespaces la sobrescribe con su
-# propia terminal integrada de VS Code, pero es buena práctica dejarla
-# definida para que la imagen sea usable también con Docker puro.
-# Prompt del curso para bash
+# 'chsh -s' changes the default login shell for the root user to Bash.
+RUN chsh -s /usr/bin/bash root
 
-#Cambiar la shel de logon a szh
-RUN chsh -s /usr/bin/zsh root
-
-#Promt institucional para estudiantes del curso
+# A Here-Document ('cat >> ... << 'EOF'') redirects multiple lines of string data 
+# into a file from within the script without manual echoes. Here, it appends a 
+# custom PROMPT string into '.zshrc' to visually personalize the command prompt 
+# and output standard exit status indicators (GOOD/BAD) (BHB Ch.1).
 RUN cat >> /root/.zshrc <<'EOF'
-
-# === Valida si un comando fue ejecutado correctamente ===
 PROMPT='%F{cyan}[Josue-Ramirez]%f %F{yellow}%1~%f %(?.%F{green}GOOD.%F{red}BAD %?)%f %#'
 EOF
 
