@@ -21,27 +21,21 @@ FROM kalilinux/kali-rolling:latest
 
 
 # ----------------------------------------------------------------------------
-# ENV: variables de entorno permanentes dentro del contenedor
+# Block C: Permanent Environment Variables
 # ----------------------------------------------------------------------------
-# Las variables de entorno son "ajustes globales" que cualquier programa
-# del sistema puede leer. Se escriben en MAYÚSCULAS por convención.
+# Environment variables are system-wide global variables accessible by any 
+# running process to change its configuration or behavior (BHB Ch.1).
 #
-#   DEBIAN_FRONTEND=noninteractive
-#     Le dice al instalador de paquetes (apt) "no me hagas preguntas
-#     interactivas, asume respuestas por defecto". Sin esto, algunos
-#     paquetes pausarían el build esperando que pulsemos una tecla y se
-#     quedaría colgado para siempre (porque no hay nadie mirando).
+# - DEBIAN_FRONTEND=noninteractive: Prevents the package manager (apt) from 
+#   triggering interactive prompts, automatically applying default choices to 
+#   prevent the build from freezing indefinitely.
+# - LANG & LC_ALL=es_ES.UTF-8: Configures the locale and character encoding 
+#   to UTF-8, ensuring special symbols, accents, and characters render properly.
+# - TERM=xterm-256color: Instructs terminal applications (like vim or htop) 
+#   that the environment supports 256 colors for syntax highlighting.
 #
-#   LANG / LC_ALL=es_ES.UTF-8
-#     Configuran idioma y codificación de caracteres. UTF-8 es lo que
-#     permite que acentos, ñ, €, emojis, etc. se muestren bien.
-#
-#   TERM=xterm-256color
-#     Le indica a los programas que la terminal admite 256 colores, para
-#     que vim, nvim, htop, etc. se vean con todos sus colores.
-#
-# La barra invertida "\" al final de cada línea significa "esto continúa
-# en la línea siguiente". Solo es para legibilidad.
+# Note: The backslash "\" acts as a line continuation character to group 
+# related variables into a single instruction for readability (BHB Ch.1).
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
