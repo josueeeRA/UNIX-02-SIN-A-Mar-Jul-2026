@@ -41,14 +41,14 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LC_ALL=es_ES.UTF-8 \
     TERM=xterm-256color
 
-
 # ----------------------------------------------------------------------------
-# Pre-respuesta a una pregunta interactiva de Wireshark
+# Block D: Pre-answering Wireshark Interactive Prompts
 # ----------------------------------------------------------------------------
-# Wireshark/tshark PREGUNTA durante su instalación si los usuarios
-# normales (no-root) deben poder capturar paquetes. Como en el contenedor
-# siempre somos root, respondemos "false" POR ADELANTADO usando
-# debconf-set-selections para que no detenga el build esperando input.
+# During installation, Wireshark normally interrupts with a prompt asking if 
+# non-root users should have packet-capturing privileges. Since this automated 
+# build has no human interaction and we operate as root inside this lab, 
+# 'debconf-set-selections' feeds the 'false' answer into the system registry 
+# beforehand via a standard input pipe (|) to bypass the block (BHB Ch.1 & Ch.3).
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
