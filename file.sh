@@ -1,0 +1,4 @@
+$ if touch test123; then
+ echo "OK: file created"
+fi
+OK: file created
