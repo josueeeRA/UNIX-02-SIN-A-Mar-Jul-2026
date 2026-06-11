@@ -188,7 +188,15 @@ RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Josue-Ramirez]%f %F{yellow}%1~%f %(?.%F{green}GOOD.%F{red}BAD %?)%f %#'
 EOF
 
-CMD ["/usr/bin/zsh"]
+# ----------------------------------------------------------------------------
+# Block M: Default Runtime Container Command
+# ----------------------------------------------------------------------------
+# CMD defines the default program that executes automatically when the container 
+# spins up (in this case, starting an interactive Bash shell) (BHB Ch.3). 
+# Difference: RUN executes *during* the build phase to permanently bake changes 
+# into the image, whereas CMD acts as a default launch command *after* the 
+# container starts running. Cloud environments can override CMD.
+CMD ["/usr/bin/bash"]
 
 
 
