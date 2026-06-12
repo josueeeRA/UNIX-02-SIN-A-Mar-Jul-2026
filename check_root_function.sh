@@ -22,3 +22,8 @@ else
     # If the function returned 1 (failure), this line runs instead.
     echo "User is not root!"
 fi
+
+#useradd Luna
+#su - Luna
+# bash check_root_function.sh
+# output: User is not root!
