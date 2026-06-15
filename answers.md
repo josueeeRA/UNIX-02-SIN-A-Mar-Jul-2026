@@ -17,3 +17,13 @@ Explanation: A literal space is used to target the beginning of the source IP fi
 Command: grep -E -c ' [0-9]{7}$' firewall.log
 Result: 2343
 Explanation: The digit character class [0-9] combined with the exact quantifier {7} ensures that only numbers with exactly seven digits are selected. The end-of-line anchor $ guarantees that these digits represent the final field (size) and that no extra characters follow.
+
+## Task 5
+Command: grep -E '^[^#]' firewall.log | sed -E 's/(^[^ ]+) ([^ ]+) ([^ ]+) ([^ ]+).*/\1 \3 \4/' | head -n 5
+Result: 
+2018-05-25 FORWARD TCP
+2018-02-22 FORWARD UDP
+2018-03-20 REJECT UDP
+2018-11-08 REJECT TCP
+2018-07-24 REJECT TCP
+Explanation: The grep command filters out the headers, passing only raw events to sed. In sed, four capture groups inside parentheses () isolate the date, time, action, and protocol fields respectively; the backreferences \1 \3 \4 discard the time group (\2) and everything after the protocol (.*), formatting the output as requested.
