@@ -7,3 +7,8 @@ Explanation: The anchor ^ forces the match to start at the beginning of the line
 Command: grep -E -c ' (DROP|REJECT) ' firewall.log
 Result: 60156
 Explanation: The expression uses parentheses () for grouping and the vertical bar | for alternation to match either DROP or REJECT. Surrounding the group with literal spaces ensures it specifically targets the action field, avoiding false positives elsewhere in the line.
+
+## Task 3
+Command: grep -E -c ' 11\.' firewall.log
+Result: 33217
+Explanation: A literal space is used to target the beginning of the source IP field, followed by the number 11. The dot is escaped with a backslash (\.) to match a literal period instead of acting as a regex wildcard for any character.
