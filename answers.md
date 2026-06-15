@@ -37,3 +37,7 @@ Explanation: This single regex combines literal matches for 'ACCEPT' and 'TCP' s
 Command: grep -E -c '^[0-9]{4}-[0-9]{2}-[0-9]{2} 0[0-2]:' firewall.log
 Result: 13138
 Explanation: The pattern anchors the match to the start of the line using ^ followed by the exact structure of the date field. Immediately after the separating space, the character class range 0[0-2]: strictly captures hours 00, 01, and 02, ensuring the time window is evaluated right at the beginning of the event log fields.
+
+## Bonus
+Regex: ^[^ ]+$
+Explanation: The regex uses a negated character class [^ ] to match any character that is not a space. Combined with the anchors for the start (^) and end ($) of the line, and the one-or-more quantifier (+), it strictly filters out any lines containing spaces, successfully matching only single-word identifiers.
