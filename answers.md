@@ -12,3 +12,8 @@ Explanation: The expression uses parentheses () for grouping and the vertical ba
 Command: grep -E -c ' 11\.' firewall.log
 Result: 33217
 Explanation: A literal space is used to target the beginning of the source IP field, followed by the number 11. The dot is escaped with a backslash (\.) to match a literal period instead of acting as a regex wildcard for any character.
+
+## Task 4
+Command: grep -E -c ' [0-9]{7}$' firewall.log
+Result: 2343
+Explanation: The digit character class [0-9] combined with the exact quantifier {7} ensures that only numbers with exactly seven digits are selected. The end-of-line anchor $ guarantees that these digits represent the final field (size) and that no extra characters follow.
