@@ -32,3 +32,8 @@ Explanation: The grep command filters out the headers, passing only raw events t
 Command: grep -E -c ' ACCEPT TCP .* 80 [0-9]+$' firewall.log
 Result: 93
 Explanation: This single regex combines literal matches for 'ACCEPT' and 'TCP' separated by spaces, followed by a wildcard .* to bypass the intermediate IP addresses and source port. It explicitly anchors the destination port '80' right before the final size field ([0-9]+$) to guarantee it targets the correct column.
+
+## Task 7
+Command: grep -E -c '^[0-9]{4}-[0-9]{2}-[0-9]{2} 0[0-2]:' firewall.log
+Result: 13138
+Explanation: The pattern anchors the match to the start of the line using ^ followed by the exact structure of the date field. Immediately after the separating space, the character class range 0[0-2]: strictly captures hours 00, 01, and 02, ensuring the time window is evaluated right at the beginning of the event log fields.
