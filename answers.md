@@ -100,3 +100,24 @@ Sam             72.90 C
 Shane           93.12 A
 Tomas           82.22 B
 Explanation: The Bash script reads the input file passed as an argument, extracts and displays the header row independently using head, and then processes the remaining body records through tail and the Unix sort tool to organize students alphabetically.
+
+## Bonus
+Command: awk -f task6_bonus.awk Lab03-data.csv
+Result:
+Student    Percentage Grade
+Andrew          73.69 C
+Ava             81.43 B
+Chelsey         62.65 D
+Diana           62.08 D
+Eliza           84.16 B
+Jackson         78.64 C
+Kenji           86.45 B
+Lucia           89.53 B
+Maria           79.57 C
+Noah            63.08 D
+Priya           71.04 C
+Sam             72.90 C
+Shane           93.12 A
+Tomas           82.22 B
+CLASS           77.18
+Explanation: This script extends the functionality of task 6 by accumulating individual percentages and maintaining a counter of unique students in the END block. After printing all students, it appends a final summary row showing the CLASS label and the overall final grade average.
