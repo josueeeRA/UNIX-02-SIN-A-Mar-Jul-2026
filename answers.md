@@ -27,3 +27,8 @@ Result:
 2018-11-08 REJECT TCP
 2018-07-24 REJECT TCP
 Explanation: The grep command filters out the headers, passing only raw events to sed. In sed, four capture groups inside parentheses () isolate the date, time, action, and protocol fields respectively; the backreferences \1 \3 \4 discard the time group (\2) and everything after the protocol (.*), formatting the output as requested.
+
+## Task 6
+Command: grep -E -c ' ACCEPT TCP .* 80 [0-9]+$' firewall.log
+Result: 93
+Explanation: This single regex combines literal matches for 'ACCEPT' and 'TCP' separated by spaces, followed by a wildcard .* to bypass the intermediate IP addresses and source port. It explicitly anchors the destination port '80' right before the final size field ([0-9]+$) to guarantee it targets the correct column.
