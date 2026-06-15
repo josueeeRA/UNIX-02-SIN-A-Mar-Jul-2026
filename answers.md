@@ -31,3 +31,32 @@ Explanation: The script filters the rows where the third field ($3) matches the 
 Command: awk -F',' 'NR>1 {if ($4 < 0.60 * $5) count++} END {print count}' Lab03-data.csv
 Result: 50
 Explanation: A conditional if statement checks if the earned score ($4) is strictly less than 60 percent (0.60) of the dynamic maximum score ($5) for that specific assignment. If true, the counter increments and the total is printed at the end.
+
+## Task 5
+Command: awk -f task5.awk Lab03-data.csv
+Result:
+Name       Low High Average
+FINAL      116  200  156.14
+H01         46  100   79.80
+H02         55  100   79.08
+H03         62  100   84.09
+H04         32   95   67.50
+H05         51  100   74.23
+H06         37   98   73.45
+H07         40  100   73.82
+L01         27   50   41.00
+L02         23   50   39.42
+L03         19   50   36.85
+L04         25   50   41.31
+L05         17   50   38.46
+L06         27   50   41.42
+L07         21   50   36.46
+Q01          9   20   14.85
+Q02          9   20   14.62
+Q03          8   20   14.54
+Q04         13   20   16.08
+Q05         8   20   14.54
+Q06         8   20   14.38
+Q07         12   20   16.15
+WS           2    5    4.08
+Explanation: The script stores sums, counts, minimums, and maximums inside associative arrays indexed by the assignment name ($3). In the END block, it loops through all tasks, computes the statistical average, and uses printf to output the formatted columns.
