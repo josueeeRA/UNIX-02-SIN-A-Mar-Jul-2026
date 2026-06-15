@@ -80,3 +80,23 @@ Sam             72.90 C
 Shane           93.12 A
 Tomas           82.22 B
 Explanation: The script accumulates the total earned points and total possible points for each student using two associative arrays indexed by student name ($1). At the end, it calculates the dynamic final percentage and determines the letter grade using an if-else structure.
+
+## Task 7
+Command: ./run.sh Lab03-data.csv
+Result:
+Student    Percentage Grade
+Andrew          73.69 C
+Ava             81.43 B
+Chelsey         62.65 D
+Diana           62.08 D
+Eliza           84.16 B
+Jackson         78.64 C
+Kenji           86.45 B
+Lucia           89.53 B
+Maria           79.57 C
+Noah            63.08 D
+Priya           71.04 C
+Sam             72.90 C
+Shane           93.12 A
+Tomas           82.22 B
+Explanation: The Bash script reads the input file passed as an argument, extracts and displays the header row independently using head, and then processes the remaining body records through tail and the Unix sort tool to organize students alphabetically.
