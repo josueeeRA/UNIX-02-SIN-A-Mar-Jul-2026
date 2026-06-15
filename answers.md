@@ -36,27 +36,47 @@ Explanation: A conditional if statement checks if the earned score ($4) is stric
 Command: awk -f task5.awk Lab03-data.csv
 Result:
 Name       Low High Average
-FINAL      116  200  156.14
-H01         46  100   79.80
-H02         55  100   79.08
-H03         62  100   84.09
-H04         32   95   67.50
-H05         51  100   74.23
-H06         37   98   73.45
-H07         40  100   73.82
-L01         27   50   41.00
-L02         23   50   39.42
-L03         19   50   36.85
-L04         25   50   41.31
-L05         17   50   38.46
-L06         27   50   41.42
-L07         21   50   36.46
-Q01          9   20   14.85
-Q02          9   20   14.62
-Q03          8   20   14.54
-Q04         13   20   16.08
-Q05         8   20   14.54
-Q06         8   20   14.38
-Q07         12   20   16.15
-WS           2    5    4.08
+FINAL      116  200  156.86
+H01         46  100   82.71
+H02         55  100   77.57
+H03         62  100   82.43
+H04         32   97   72.93
+H05         51  100   74.00
+H06         37   98   74.21
+H07         40  100   72.93
+L01         27   50   40.21
+L02         23   50   39.21
+L03         19   50   36.57
+L04         25   50   40.36
+L05         17   50   38.21
+L06         27   50   40.07
+L07         21   50   38.43
+Q01          9   20   14.29
+Q02          9   20   14.86
+Q03          8   20   15.07
+Q04         13   20   16.43
+Q05          8   18   15.07
+Q06          8   20   14.71
+Q07         12   20   15.36
+WS           2    5    4.21
 Explanation: The script stores sums, counts, minimums, and maximums inside associative arrays indexed by the assignment name ($3). In the END block, it loops through all tasks, computes the statistical average, and uses printf to output the formatted columns.
+
+## Task 6
+Command: awk -f task6.awk Lab03-data.csv
+Result:
+Student    Percentage Grade
+Andrew          73.69 C
+Ava             81.43 B
+Chelsey         62.65 D
+Diana           62.08 D
+Eliza           84.16 B
+Jackson         78.64 C
+Kenji           86.45 B
+Lucia           89.53 B
+Maria           79.57 C
+Noah            63.08 D
+Priya           71.04 C
+Sam             72.90 C
+Shane           93.12 A
+Tomas           82.22 B
+Explanation: The script accumulates the total earned points and total possible points for each student using two associative arrays indexed by student name ($1). At the end, it calculates the dynamic final percentage and determines the letter grade using an if-else structure.

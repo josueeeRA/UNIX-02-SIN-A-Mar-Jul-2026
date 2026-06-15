@@ -13,8 +13,17 @@ NR > 1 {
 }
 END {
     PROCINFO["sorted_in"] = "@ind_str_asc"
-    for (t in count) {
-        avg = sum[t] / count[t]
-        printf "%-10s %3d %4d %7.2f\n", t, min[t], max[t], avg
+    n = asorti(count, dest)
+    if (n > 0) {
+        for (i = 1; i <= n; i++) {
+            t = dest[i]
+            avg = sum[t] / count[t]
+            printf "%-10s %3d %4d %7.2f\n", t, min[t], max[t], avg
+        }
+    } else {
+        for (t in count) {
+            avg = sum[t] / count[t]
+            printf "%-10s %3d %4d %7.2f\n", t, min[t], max[t], avg
+        }
     }
 }
