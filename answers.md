@@ -26,3 +26,8 @@ Shane      193
 Andrew     123
 Maria      152
 Explanation: The script filters the rows where the third field ($3) matches the string FINAL. Then, printf formats the output using %-10s to left-align the name within 10 spaces and %3d to right-align the score within 3 spaces.
+
+## Task 4
+Command: awk -F',' 'NR>1 {if ($4 < 0.60 * $5) count++} END {print count}' Lab03-data.csv
+Result: 50
+Explanation: A conditional if statement checks if the earned score ($4) is strictly less than 60 percent (0.60) of the dynamic maximum score ($5) for that specific assignment. If true, the counter increments and the total is printed at the end.
