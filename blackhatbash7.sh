@@ -19,3 +19,9 @@ grep  'Mozilla' log.txt
 grep 'Godzilla' log.txt
 sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
 grep 'Godzilla' newlog.txt
+sed '1d' newlog.txt
+cat newlog.txt
+sed 'd' log.txt
+sed 's/ //g' newlog.txt > newlog1.txt
+sed '8,10d' newlog1.txt
+sed -n '10,15 p' log.txt
