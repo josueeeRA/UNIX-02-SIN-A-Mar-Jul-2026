@@ -18,4 +18,4 @@ sed 's/Mozilla/Godzilla/g' log.txt
 grep  'Mozilla' log.txt
 grep 'Godzilla' log.txt
 sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
-grep 'Godzilla' log.txt
+grep 'Godzilla' newlog.txt
